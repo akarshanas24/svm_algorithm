@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SVM Educational Platform Design System */
+
+@layer base {
+  :root {
+    /* Unique Mathematical Paper Theme */
+    --background: 45 30% 97%;
+    --foreground: 45 20% 15%;
+
+    --card: 45 40% 99%;
+    --card-foreground: 45 20% 15%;
+
+    --popover: 45 40% 99%;
+    --popover-foreground: 45 20% 15%;
+
+    /* Primary: Deep Mathematical Blue with golden accent */
+    --primary: 210 85% 50%;
+    --primary-foreground: 45 40% 99%;
+    --primary-glow: 210 100% 70%;
+
+    /* Secondary: Warm Academic Beige */
+    --secondary: 45 25% 92%;
+    --secondary-foreground: 45 20% 20%;
+
+    --muted: 45 20% 94%;
+    --muted-foreground: 45 15% 50%;
+
+    /* Accent: Mathematical Gold */
+    --accent: 45 85% 55%;
+    --accent-foreground: 45 20% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 40% 99%;
+
+    --border: 45 20% 88%;
+    --input: 45 25% 95%;
+    --ring: 210 85% 50%;
+
+    /* Enhanced SVM Color Palette */
+    --support-vector: 15 90% 60%;         /* Vibrant orange for support vectors */
+    --support-vector-glow: 15 100% 70%;   /* Glowing orange */
+    --hyperplane: 210 85% 50%;            /* Mathematical blue for hyperplane */
+    --hyperplane-glow: 210 100% 70%;      /* Glowing blue */
+    --margin: 160 70% 45%;                /* Forest green for margins */
+    --margin-glow: 160 80% 60%;           /* Glowing green */
+    --data-class-1: 210 85% 60%;          /* Blue for class 1 */
+    --data-class-2: 0 80% 60%;            /* Red for class 2 */
+    --optimization: 280 70% 55%;          /* Purple for optimization */
+    --optimization-glow: 280 80% 70%;     /* Glowing purple */
+
+    /* Mathematical Paper Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 50%) 0%, hsl(45 85% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(45 40% 99%) 0%, hsl(45 25% 95%) 100%);
+    --gradient-math: linear-gradient(120deg, hsl(45 35% 96%) 0%, hsl(210 30% 96%) 100%);
+    --gradient-paper: linear-gradient(145deg, hsl(45 40% 98%) 0%, hsl(45 30% 96%) 100%);
+    --gradient-optimization: linear-gradient(90deg, hsl(280 70% 55%) 0%, hsl(210 85% 50%) 100%);
+
+    /* Advanced Mathematical Shadows */
+    --shadow-card: 0 4px 20px hsl(45 20% 60% / 0.12);
+    --shadow-interactive: 0 8px 32px hsl(210 85% 50% / 0.18);
+    --shadow-glow: 0 0 40px hsl(210 100% 70% / 0.25);
+    --shadow-paper: 0 2px 12px hsl(45 15% 70% / 0.15);
+    --shadow-mathematical: 0 6px 25px hsl(45 85% 55% / 0.2);
+
+    /* Glow Effects for Optimization */
+    --glow-hyperplane: 0 0 20px hsl(210 100% 70% / 0.6);
+    --glow-support-vector: 0 0 15px hsl(15 100% 70% / 0.8);
+    --glow-margin: 0 0 12px hsl(160 80% 60% / 0.5);
+    --glow-optimization: 0 0 30px hsl(280 80% 70% / 0.7);
+
+    /* Mathematical Typography */
+    --font-math: 'Computer Modern', 'Latin Modern Math', 'Times New Roman', serif;
+    --font-code: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
+
+    /* Enhanced Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-mathematical: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Mathematical equation styling with paper aesthetic */
+  .math-equation {
+    font-family: var(--font-math);
+    @apply text-sm px-4 py-3 rounded-lg border-2;
+    background: var(--gradient-math);
+    border-color: hsl(var(--accent) / 0.3);
+    box-shadow: var(--shadow-mathematical);
+    transition: var(--transition-mathematical);
+  }
+
+  .math-equation:hover {
+    box-shadow: var(--glow-optimization);
+    transform: scale(1.02);
+  }
+
+  /* Interactive paper-style cards */
+  .interactive-card {
+    background: var(--gradient-paper);
+    @apply backdrop-blur-sm border-2;
+    border-color: hsl(var(--border));
+    box-shadow: var(--shadow-paper);
+    transition: var(--transition-mathematical);
+  }
+
+  .interactive-card:hover {
+    box-shadow: var(--shadow-interactive);
+    transform: translateY(-4px) scale(1.01);
+    border-color: hsl(var(--primary) / 0.4);
+  }
+
+  /* Mathematical concept highlighting */
+  .concept-highlight {
+    background: var(--gradient-optimization);
+    @apply border-l-4 pl-6 py-4 rounded-r-lg;
+    border-left-color: hsl(var(--accent));
+    box-shadow: var(--glow-optimization);
+  }
+
+  /* Enhanced mathematical animations */
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-optimization {
+    animation: optimization 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { 
+      box-shadow: var(--glow-hyperplane);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: var(--glow-optimization);
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes optimization {
+    0% { opacity: 0.5; transform: translateX(-10px); }
+    50% { opacity: 1; transform: translateX(0px); }
+    100% { opacity: 0.5; transform: translateX(10px); }
+  }
+
+  /* Paper-style chart container */
+  .chart-container {
+    background: var(--gradient-paper);
+    @apply rounded-xl border-2 p-6;
+    border-color: hsl(var(--border));
+    box-shadow: var(--shadow-paper);
+    transition: var(--transition-mathematical);
+  }
+
+  .chart-container:hover {
+    box-shadow: var(--shadow-interactive);
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Mathematical derivation steps */
+  .derivation-step {
+    background: var(--gradient-math);
+    @apply p-4 rounded-lg border-l-4 mb-4;
+    border-left-color: hsl(var(--optimization));
+    box-shadow: var(--shadow-mathematical);
+  }
+
+  /* SVM specific styling */
+  .hyperplane-line {
+    filter: drop-shadow(var(--glow-hyperplane));
+  }
+
+  .support-vector-point {
+    filter: drop-shadow(var(--glow-support-vector));
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .margin-area {
+    filter: drop-shadow(var(--glow-margin));
+  }
+
+  /* Code blocks for mathematical formulas */
+  .formula-block {
+    font-family: var(--font-code);
+    background: var(--gradient-paper);
+    @apply p-4 rounded-lg border-2 font-mono;
+    border-color: hsl(var(--accent) / 0.4);
+    box-shadow: var(--shadow-mathematical);
+  }
+}
