@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# SVM Visualizer – Interactive SVM Learning Tool
 
-## Project info
+An interactive application to explore how **Support Vector Machine (SVM)** works by visualizing the best hyperplane, margins, and decision boundaries.
 
-**URL**: https://lovable.dev/projects/e43ca5ad-cc26-497c-8cc5-4b8fe755e984
+---
 
-## How can I edit this code?
+## Project Description
 
-There are several ways of editing your application.
+This project implements an SVM model that finds the optimal hyperplane to separate classes in a dataset. It allows users to provide input data in multiple ways and observe how the model behaves under different conditions.
 
-**Use Lovable**
+### Users can:
+- Upload a CSV file  
+- Load sample data  
+- Enter data manually  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e43ca5ad-cc26-497c-8cc5-4b8fe755e984) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## SVM Functionality
 
-**Use your preferred IDE**
+The application supports both **linear and non-linear SVM**:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🔹 Linear SVM
+- Produces a straight-line decision boundary  
+- Works when classes can be separated linearly  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🔹 Non-Linear SVM (RBF Kernel)
+- Produces a curved decision boundary  
+- Used when a straight line cannot separate the classes  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Visualization Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The model provides clear visual insights into:
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🔹 Hyperplane
+- The optimal boundary separating classes  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 🔹 Decision Boundary
+- Straight line (Linear SVM)  
+- Curved boundary (RBF Kernel)  
 
-**Edit a file directly in GitHub**
+### 🔹 Margins
+- Distance between the hyperplane and the nearest data points  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🔹 Support Vectors
+- Key data points that define the hyperplane  
 
-**Use GitHub Codespaces**
+### 🔹 Class Representation
+- Visual distinction between different classes  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## How It Works!
 
-This project is built with:
+1. Upload, load, or enter dataset  
+2. Choose SVM type (Linear / RBF)  
+3. Model computes the optimal hyperplane  
+4. Visualization displays:
+   - Decision boundary  
+   - Margins  
+   - Support vectors  
+   - Class separation  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## Try It Live
 
-Simply open [Lovable](https://lovable.dev/projects/e43ca5ad-cc26-497c-8cc5-4b8fe755e984) and click on Share -> Publish.
+https://svmalgorithm.vercel.app  
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## Conclusion
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project helps in understanding how **SVM identifies the best hyperplane** and how different kernels affect the decision boundary. It provides a clear visual way to learn concepts like margins, support vectors, and class separation, making SVM easier to understand in practice.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+⭐ *If you found this project useful, consider giving it a star!*
